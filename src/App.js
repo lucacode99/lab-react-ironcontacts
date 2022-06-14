@@ -23,11 +23,8 @@ function App() {
        <td align="Left"><img src={item.pictureUrl} alt="playing ctor/actress" style={{height: 50}}/></td>
        <td align="Left">{item.name}</td>
        <td align="Left">{item.popularity}</td>
-       <td> if ({item.wonOscar}) {
-        <img src={"https://cdn.pixabay.com/photo/2016/03/31/15/17/achievement-1293132_960_720.png"} alt="oskar" style={{height: 30}}/>
-       }
-
-       </td>
+       <td>{item.wonOscar ? <span>🏆</span> : ''}</td>
+       <td>{item.wonEmmy ? <span>🏆</span> : ''}</td>
      </tr>
      </div>
     ))
